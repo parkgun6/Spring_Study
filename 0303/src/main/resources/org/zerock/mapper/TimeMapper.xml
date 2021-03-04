@@ -5,7 +5,7 @@
 <mapper namespace="org.zerock.mapper.TimeMapper">
 
 	<select id="getTime2" resultType="string">
-		select now()
+		<![CDATA[select now()]]>
 	</select>
 
 </mapper>
