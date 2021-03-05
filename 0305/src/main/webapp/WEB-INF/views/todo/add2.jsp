@@ -17,7 +17,7 @@
 <body>
 	<h1>Add2</h1>
 	<!-- target="zero" -->
-	<form action="/todo/add" method="post">
+	<form action="/todo/add2" method="post">
 		<div>
 			<input type='text' name='title' value='${todoDTO.title }'>
 		</div>
@@ -28,10 +28,6 @@
 	</form>
 	<!-- 1. <iframe name='zero'></iframe> -->
 
-	<script
-		src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-		
-	</script>
 
 	<script>
 		function showResult() {
@@ -43,10 +39,10 @@
 			$(".btn").on("click", function(e) {
 				e.preventDefault();
 				/* 1.  $('form').submit(); */
-				const data = {title:$("input[name='title']".val(),complete:false)}
+				const data = {title:$("input[name='title']").val(),complete:false}
 				console.log(data)
 				$.post('/todo/add2',data,function(result){
-					//console.log(result);
+					console.log(result);
 					alert(result);
 				})
 			})
