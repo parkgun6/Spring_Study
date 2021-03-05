@@ -114,7 +114,7 @@
 			<version>${org.springframework-version}</version>
 		</dependency>
 
-		<!-- 테스트 추가했다. -->
+		<!-- 테스트 추가. -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
