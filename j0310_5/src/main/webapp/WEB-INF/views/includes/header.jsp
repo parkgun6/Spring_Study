@@ -51,7 +51,7 @@
 				<nav
 					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 					
-					<div><img class="title img-title"src="/resources/img/title.jpg" alt=""></div>
+					<div><a href = "/board/list"><img class="title img-title"src="/resources/img/title.jpg" alt=""></a></div>
 					
 					<!-- Topbar Navbar -->
 					<ul class="navbar-nav ml-auto">

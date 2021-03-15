@@ -19,8 +19,8 @@ function movePage(){
 }
 /* ------------------------------목록이동------------------------------ */
 function moveList(){
-//	actionForm.setAttribute("action","/board/list")
-//	actionForm.submit();
+	actionForm.setAttribute("action","/board/list")
+	actionForm.submit();
 }
 /* ------------------------------수정Ajax------------------------------ */
 function sendAjax(data){
@@ -71,26 +71,32 @@ dqs(".listBtn").addEventListener("click",function(){
 //	$("#modModal").modal("show")	
 //	});
 
-/* ------------------------------삭제 이벤트------------------------------ */
-dqs(".removeBtn").addEventListener("click",function(){
-	$('#removeModal').modal('show');
-	
-},false)
-
 
 /* ------------------------------삭제 Ajax------------------------------ */
-function sendRemoveAjax(){
+
+	function sendRemoveAjax(){
 	console.log('remove');
 	$('#removeModal').modal('hide');
 	return fetch("/board/remove",
-			{method:'post',
-		headers:{'Content-Type':'application/x-www-form-urlencoded'},
-		body:"bno=${board.bno}"
+			{
+			method:'post',
+		    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+		    body:"bno=" + $("input[name='bno']").val()
 		}).then(res =>  { 
 			res
-
-			//alert("AAA");
 			$('#removeCheckModal').modal('show');
 		})
 	
 }
+/* ------------------------------삭제 이벤트------------------------------ */
+dqs(".removeBtn").addEventListener("click",function(){
+	$('#removeModal').modal('show');
+
+},false)
+/* ---------------------------삭제(모달) 이벤트--------------------------- */
+
+dqs(".modalRemoveBtn").addEventListener("click",function(){
+	$('#removeModal').modal('hide');
+
+	sendRemoveAjax()
+},false)

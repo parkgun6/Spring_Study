@@ -64,7 +64,7 @@
         <p>삭제하시겠습니까?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" onclick="sendRemoveAjax()">Remove</button>
+        <button type="button" class="modalRemoveBtn btn btn-primary">Remove</button>
         <button type="button" class="btn btn-secondary" data-dismiss="modal" >Close</button>
       </div>
     </div>
