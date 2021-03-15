@@ -1,9 +1,9 @@
 package org.zerock.board;
 
 
-import org.geon.common.config.CommonConfig;
-import org.geon.common.config.ServletConfig;
-import org.geon.common.config.WebConfig;
+import org.gun.common.config.CommonConfig;
+import org.gun.common.config.ServletConfig;
+import org.gun.common.config.WebConfig;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
