@@ -42,24 +42,29 @@ public class LogAdvice {
 	//@Around(value =  "execution(* org.zerock..*.*Service*.*(..))")
 	public Object logTime(ProceedingJoinPoint pjp) {
 		
+String methodName = pjp.getSignature().getName();
+		
 		log.info(pjp.getSignature());
-		log.info(Arrays.toString(pjp.getArgs()));
+		log.info(methodName+":::::::"+Arrays.toString(pjp.getArgs()));
 		log.info(pjp.getThis());
 		
 		long start = System.currentTimeMillis();
 		
 		Object result = null;
+		Object error = null;
+		
 		try {
 			result = pjp.proceed();
-		} catch (Throwable e) {
-			e.printStackTrace();
+		} catch (Throwable t) {
+			log.error(t.getMessage());
+			error = t ;
 		}
 		
 		log.info("end...............");
 		
 		long end = System.currentTimeMillis();
 		
-		log.info("Time : " + (end - start));
+		log.info(methodName +"Time : " + (end - start));
 		
 		return result;
 	}
@@ -78,10 +83,13 @@ public class LogAdvice {
 		long start = System.currentTimeMillis();
 		
 		Object result = null;
+		Object error = null;
+		
 		try {
 			result = pjp.proceed();
-		} catch (Throwable e) {
-			e.printStackTrace();
+		} catch (Throwable t) {
+			log.error(t.getMessage());
+			error = t ;
 		}
 		
 		log.info("end...............");
