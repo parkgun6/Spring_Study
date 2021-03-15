@@ -1,4 +1,4 @@
-package org.zerock.mapper;
+package org.geon.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;

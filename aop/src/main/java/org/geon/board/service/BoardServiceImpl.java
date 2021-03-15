@@ -1,4 +1,4 @@
-package org.zerock.board.service;
+package org.geon.board.service;
 
 import org.springframework.stereotype.Service;
 

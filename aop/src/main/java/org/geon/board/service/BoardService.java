@@ -1,4 +1,4 @@
-package org.zerock.board.service;
+package org.geon.board.service;
 
 public interface BoardService {
 

@@ -1,4 +1,4 @@
-package org.zerock.service;
+package org.geon.service;
 
 public interface SampleService {
 

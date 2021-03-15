@@ -45,9 +45,9 @@
 	<tx:annotation-driven/>
 	
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-	<context:component-scan base-package="org.zerock.service"></context:component-scan>
-	<context:component-scan base-package="org.zerock.board.service"></context:component-scan>
+	<context:component-scan base-package="org.geon.service"></context:component-scan>
+	<context:component-scan base-package="org.geon.board.service"></context:component-scan>
 	<context:component-scan base-package="org.zerock.board.controller"></context:component-scan>
-	<context:component-scan base-package="org.zerock.aop"></context:component-scan>
-	<mybatis-spring:scan base-package="org.zerock.mapper"/>
+	<context:component-scan base-package="org.geon.aop"></context:component-scan>
+	<mybatis-spring:scan base-package="org.geon.mapper"/>
 </beans>
