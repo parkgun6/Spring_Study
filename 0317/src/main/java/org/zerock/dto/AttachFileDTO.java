@@ -18,7 +18,7 @@ public class AttachFileDTO {
 	private boolean image;
 	
 	
-	
+	//잭슨데이터바인드가 get을 붙인걸 인식한다.
 	public String getLink() {
 		
 		//url호출시에 .은 문제가되기때문에 변환해준다.

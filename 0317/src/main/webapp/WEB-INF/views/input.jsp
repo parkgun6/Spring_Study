@@ -7,6 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+<hr/>
+<button id="saveBtn">Register</button>
+<hr/>
+<hr/>
 <input type='file' name='uploadFile' onchange="preview()" multiple='multiple'>
 
 <!-- <button id='uploadBtn'>Upload</button> -->
@@ -17,9 +21,29 @@
 </ul>
 
 <script>
+document.querySelector("#saveBtn")
+.addEventListener("click", function(e){
+	
+
+
+  const obj  = {
+		  title:"Title", 
+		  content:"Content",
+		  writer:"user00",
+		  fileList: arr}	
+	
+  fetch("/board/register",
+		  {
+	  		method: 'post',
+	  		headers: {'Content-type': 'application/json; charset=UTF-8'},
+	  		body: JSON.stringify(obj)
+		  })
+
+}, false);
 
 const uploadUL = document.querySelector(".uploadResult");
 
+const arr = [];
 
 const uploadFile = document.querySelector("input[name='uploadFile']");
 
@@ -52,9 +76,13 @@ function preview(){
 		let htmlCode = "";
 		for (let i = 0; i < jsonObj.length; i++) {
 			
-			fileObj = jsonObj[i];
+			//변수를 선언해주는것이 좋다.
+			let fileObj = jsonObj[i];
+			arr.push(fileObj)
 			//돔은 한번만 만들어서 한번에 append해주는게 성능상 좋다.
-			htmlCode +="<li><img src='/view?file="+fileObj.link+"'><span>"+fileObj.fileName+"</span></li>";
+			//remove(remove(JSON.stringify))를 해줘야지만 동작한다.
+			htmlCode +="<li id='li_"+fileObj.uuid+"'><img src='/view?file="+fileObj.link+"'>"+
+			"<span>"+fileObj.fileName+"</span><button onclick='removeFile("+JSON.stringify(fileObj)+")'>DEL</button></li>";
 		}
 		
 		//+= 가 아닌 =면 기존의것이 초기화된상태로 추가된다.
@@ -69,7 +97,7 @@ function preview(){
 		
 		
 		document.querySelector("body").insertAdjacentHTML('afterbegin',outerHTML);
-		
+		console.dir(document.querySelector("input[name=uploadFile]"));
 		//input = cloneUploadFile;
 		//console.log(input.value);
 		
@@ -80,6 +108,23 @@ function preview(){
 	})
 }
 
+
+/* -----------------------------li 삭제 함수------------------------------ */
+
+
+function removeFile(param){
+	console.log(param);
+	//alert("remove file");
+	
+	fetch("/removeFile",
+			{
+			method: 'delete',
+			headers: {'Content-Type':'application/json'},
+			body: JSON.stringify(param)
+			})
+	
+	document.querySelector("#li_"+param.uuid).remove();
+}
 
 /* ------------------------------업로드 이벤트----------------------------- */
 /* document.querySelector("#uploadBtn").addEventListener("click",function(e){

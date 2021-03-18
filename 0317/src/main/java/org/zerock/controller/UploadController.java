@@ -11,13 +11,16 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.ibatis.annotations.Delete;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.zerock.dto.AttachFileDTO;
@@ -157,5 +160,29 @@ public class UploadController {
 		return new ResponseEntity<>(list,HttpStatus.OK)	;
 	}
 	
-	
+	@DeleteMapping("/removeFile")
+	public ResponseEntity<String> removeFile(@RequestBody AttachFileDTO dto){
+		
+		log.info(dto);
+		
+		log.info("remove....................");
+		
+		//파일의 경로를 알아낸다. 따로만든이유는 썸네일의 변수때문.
+		String filePath = "C:\\upload\\" + dto.getUploadPath();
+		String fileName = dto.getUuid() + "_" + dto.getFileName();
+		
+		//이미지일 경우 썸네일도 제거한다.
+		if (dto.isImage()) {
+
+			File thumb = new File(filePath + File.separator + "s_" + fileName);
+			thumb.delete();
+
+		}
+		
+		//delete를 사용하면 경로에있는 파일을 삭제한다.
+		File target = new File(filePath + File.separator + fileName);
+		target.delete();
+		
+		return new ResponseEntity<String>("success",HttpStatus.OK);
+	}
 }
