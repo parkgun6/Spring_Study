@@ -2,6 +2,7 @@ package org.geon.service;
 
 
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import org.geon.dao.OrderDAO;
@@ -17,7 +18,7 @@ public class OrderServiceImpl implements OrderService{
 	OrderDAO dao;
 	
 	@Override
-	public Order getOrder(String store) throws InterruptedException, ExecutionException {
+	public List<Order> getOrder(String store) throws InterruptedException, ExecutionException {
 		return dao.getOrder(store);
 	}
 	@Override

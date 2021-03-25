@@ -15,7 +15,8 @@ public class Order {
 
 	private String store;
 	private String menu;
-	private long time;
+	private Integer idx;
+	private String time;
 
 
 }
