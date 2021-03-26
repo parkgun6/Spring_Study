@@ -1,6 +1,8 @@
 package org.geon.domain;
 
 
+import java.util.Date;
+
 import com.google.auto.value.AutoValue.Builder;
 
 import lombok.AllArgsConstructor;
@@ -16,7 +18,7 @@ public class Order {
 	private String store;
 	private String menu;
 	private Integer idx;
-	private String time;
+	private Date time;
 
 
 }

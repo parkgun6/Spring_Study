@@ -78,7 +78,7 @@ public class OrderDAO {
 	    	log.info(store);
 	        CollectionReference docRef = db.collection(COL_NAME);
 	        
-	        Query query = docRef.whereEqualTo("store", store);
+	        Query query = docRef.whereEqualTo("store", store).limit(10);
 	        ApiFuture<QuerySnapshot> querySnapshot = query.get();
 //	        log.info("querySnapshot");
 //	        log.info(querySnapshot);
@@ -103,10 +103,11 @@ public class OrderDAO {
 	        
 	        //log.info(document.getData());
 	        	
-	        log.info(document.toObject(Order.class));
-	        orderList.add(document.toObject(Order.class));
+	        //log.info(document.toObject(Order.class));
+	        Order docToOrder = document.toObject(Order.class);
+	        orderList.add(docToOrder);
+	        //log.info(docToOrder.getTime());
 	        log.info(orderList);
-	       // log.info(orderList);
 	        }
 	        
 
