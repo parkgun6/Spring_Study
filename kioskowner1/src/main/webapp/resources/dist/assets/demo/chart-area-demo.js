@@ -7,7 +7,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["13day ago", "12day ago", "11day ago", "10day ago", "9day ago", "8day ago", "7day ago", "6day ago", "5day ago", "4day ago", "3day ago", "2day ago", "1day ago"],
+    labels: ["13일전", "12일전", "11일전", "10일전", "9일전", "8일전", "7일전", "6일전", "5일전", "4일전", "3일전", "2일전", "1일전"],
     datasets: [{
       label: "Sessions",
       lineTension: 0.3,

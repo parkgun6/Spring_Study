@@ -4,7 +4,7 @@
 
 <!-- Page Heading -->
 
-<h1 class="mt-4">MAIN PAGE</h1>
+<h1 class="mt-4">DASH BOARD</h1>
 <div class="card mb-4">
 <div class="row">
                             
