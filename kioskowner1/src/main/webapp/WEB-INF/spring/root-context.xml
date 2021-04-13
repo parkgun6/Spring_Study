@@ -14,11 +14,11 @@
 	<!-- 히카리cp xml설정 -->
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<property name="driverClassName"
-			value="com.mysql.cj.jdbc.Driver"></property>
+			value="oracle.jdbc.driver.OracleDriver"></property>
 		<property name="jdbcUrl"
-			value="jdbc:mysql://localhost:3306/dclass?serverTimezone=UTC"></property>
-		<property name="username" value="springuser"></property>
-		<property name="password" value="springuser"></property>
+			value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="geon"></property>
+		<property name="password" value="geon"></property>
 	</bean>
 
 	<!-- HikariCP configuration -->
@@ -40,7 +40,9 @@
 		<tx:annotation-driven />
 
 	<mybatis-spring:scan
-		base-package="org.zerock.mapper" />
+		base-package="org.geon.*.mapper" />
+	<context:component-scan base-package="org.geon.*.service"></context:component-scan>
+		
 	
 		
 </beans>

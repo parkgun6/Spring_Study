@@ -1,28 +1,51 @@
 </div>
-</main>
-
-<footer class="py-4 bg-light mt-auto">
-	<div class="container-fluid">
-		<div class="d-flex align-items-center justify-content-between small">
-			<div class="text-muted">Copyright &copy; Geon Website 2021</div>
-			<div>
-				<a href="#">Privacy Policy</a> &middot; <a href="#">Terms &amp;
-					Conditions</a>
-			</div>
-		</div>
-	</div>
+<!-- ============================================================== -->
+<!-- End Container fluid  -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- footer -->
+<!-- ============================================================== -->
+<footer class="footer text-center">
+    All Rights Reserved by Matrix-admin. Designed and Developed by <a
+        href="https://www.wrappixel.com">WrapPixel</a>.
 </footer>
+<!-- ============================================================== -->
+<!-- End footer -->
+<!-- ============================================================== -->
 </div>
+<!-- ============================================================== -->
+<!-- End Page wrapper  -->
+<!-- ============================================================== -->
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="<c:url value="/resources/dist/js/scripts.js"/>"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="<c:url value="/resources/dist/assets/demo/chart-area-demo.js"/>"></script>
-        <script src="<c:url value="/resources/dist/assets/demo/chart-bar-demo.js"/>"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="<c:url value="/resources/dist/assets/demo/datatables-demo.js"/>"></script>
-        <script src="<c:url value="/resources/dist/assets/demo/chart-pie-demo.js"/>"></script>
-    </body>
+<!-- ============================================================== -->
+<!-- End Wrapper -->
+<!-- ============================================================== -->
+<!-- ============================================================== -->
+<!-- All Jquery -->
+<!-- ============================================================== -->
+<script src="/owner/resources/assets/libs/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap tether Core JavaScript -->
+<script src="/owner/resources/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/owner/resources/assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+<script src="/owner/resources/assets/extra-libs/sparkline/sparkline.js"></script>
+<!--Wave Effects -->
+<script src="/owner/resources/dist/js/waves.js"></script>
+<!--Menu sidebar -->
+<script src="/owner/resources/dist/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="/owner/resources/dist/js/custom.min.js"></script>
+<!--This page JavaScript -->
+<!-- <script src="<c:url value="/resources/dist/js/pages/dashboards/dashboard1.js"/>"></script> -->
+<!-- Charts js Files -->
+<script src="/owner/resources/assets/libs/flot/excanvas.js"></script>
+<script src="/owner/resources/assets/libs/flot/jquery.flot.js"></script>
+<script src="/owner/resources/assets/libs/flot/jquery.flot.pie.js"></script>
+<script src="/owner/resources/assets/libs/flot/jquery.flot.time.js"></script>
+<script src="/owner/resources/assets/libs/flot/jquery.flot.stack.js"></script>
+<script src="/owner/resources/assets/libs/flot/jquery.flot.crosshair.js"></script>
+<script src="/owner/resources/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+<script src="/owner/resources/dist/js/pages/chart/chart-page-init.js"></script>
+
+</body>
+
 </html>

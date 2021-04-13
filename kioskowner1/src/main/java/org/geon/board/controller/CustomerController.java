@@ -1,4 +1,4 @@
-package org.geon.customer.controller;
+package org.geon.board.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

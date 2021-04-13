@@ -1,63 +1,189 @@
-# [Start Bootstrap - SB Admin](https://startbootstrap.com/template/sb-admin/)
+# Matrix Admin Bootstrap 5
 
-[SB Admin](https://startbootstrap.com/template/sb-admin/) is an open source, admin dashboard template for [Bootstrap](https://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
+<ul>
+  <li>  
+    <h4><a href="https://wrappixel.com/demos/free-admin-templates/matrix-admin-bt4/html/ltr/index.html">Demo Link</a></h4>
+  </li>
+  <li>
+    <h4><a href="http://matrixadmin.wrappixel.com/matrix-admin-package-full.zip">Download Link</a></h4>
+  </li>
+</ul>
+  
+<!-- Main image of Template -->
+<a target="_blank" href="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/matrix-bootstrap-admin-y.jpg">
+  <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/matrix-bootstrap-admin-y.jpg" />
+</a>
 
-## Preview
+<!-- Description of Template -->
+<p>Matrix Admin is basic yet very useful bootstrap 5 dashbaord template for your projects.If you are looking for modern yet clean admin template for your backend project. Matrix Admin is the right choice for you. If your application requires more options. We like to suggest you the Premium Templates.</p>
 
-[![SB Admin Preview](https://assets.startbootstrap.com/img/screenshots/templates/sb-admin.png)](https://startbootstrap.github.io/startbootstrap-sb-admin/)
+<p>Please give us rate on github, Thanks<p>
 
-**[View Live Preview](https://startbootstrap.github.io/startbootstrap-sb-admin/)**
+<!-- Upgrade to Premium version of Template -->
+<h2>Upgrade to Premium Admin Dashboards</h2>
 
-## Status
+<!-- bootstrap premium dashboards -->
+<table>
+<thead>
+<tr>
+<th>MaterialPro Bootstrap Admin</th>
+<th>Ample Bootstrap Admin</th>
+<th>Monster Bootstrap Admin</th>
+<th>AdminPro Bootstrap Theme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <a href="https://www.wrappixel.com/templates/materialpro/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/materialpro-bootstrap-admin-y.jpg" alt="Material pro Bootstrap" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/ampleadmin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/ample-admin-bootstrap-y.jpg" alt="Ample Bootstrap Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/monsteradmin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/monster-bootstrap-admin-y.jpg" alt="Monster Bootstrap Admin" style="max-width:150px;">
+  </a>
+</td>
+  <td>
+  <a href="https://www.wrappixel.com/templates/adminpro/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-bootstrap-admin-template-y.jpg" alt="AdminPro Bootstrap Theme" style="max-width:150px;">
+  </a>
+</td>
+</tr>
+</tbody>
+</table>
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/StartBootstrap/startbootstrap-sb-admin/master/LICENSE)
-[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin)
-[![Build Status](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin.svg?branch=master)](https://travis-ci.org/StartBootstrap/startbootstrap-sb-admin)
-[![dependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin/status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin)
-[![devDependencies Status](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin/dev-status.svg)](https://david-dm.org/StartBootstrap/startbootstrap-sb-admin?type=dev)
+<!-- angular premium dashboards -->
+<table>
+<thead>
+<tr>
+<th>MaterialPro Angular Admin</th>
+<th>Ample Admin Angular</th>
+<th>Monster Angular Admin</th>
+<th>AdminPro Angular Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <a href="https://www.wrappixel.com/templates/materialpro-angular-dashboard/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/materialpro-angular-admin-y.jpg" alt="MaterialPro Angular 11 Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/ample-admin-angular/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/ample-admin-angular-y.jpg" alt="Ample Angular Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/monster-angular-dashboard/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/monster-angular-admin-y.jpg" alt="Monster Angular Admin" style="max-width:150px;">
+  </a>
+</td>
+  <td>
+  <a href="https://www.wrappixel.com/templates/adminpro-angular-dashboard/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-angular-dashboard-y.jpg" alt="AdminPro Angular Theme" style="max-width:150px;">
+  </a>
+</td>
+</tr>
+</tbody>
+</table>
 
-## Download and Installation
+<!-- react premium dashboards -->
+<table>
+<thead>
+<tr>
+<th>MaterialPro React Admin</th>
+<th>Ample React Admin</th>
+<th>Monster React Admin</th>
+<th>AdminPro React Admin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <a href="https://www.wrappixel.com/templates/materialpro-react-redux-admin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/materialpro-react-admin-y.jpg" alt="MaterialPro React Redux Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/ample-react-dashboard/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/09/ample-react-admin-template-y.png" alt="Ample React Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/monster-react-admin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/06/monster-react-admin-template-y-20.jpg" alt="Monster React Admin" style="max-width:150px;">
+  </a>
+</td>
+  <td>
+  <a href="https://www.wrappixel.com/templates/adminpro-react-redux-admin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/adminpro-react-dashboard-y.jpg" alt="AdminPro React Theme" style="max-width:150px;">
+  </a>
+</td>
+</tr>
+</tbody>
+</table>
 
-To begin using this template, choose one of the following options to get started:
+<!-- vuejs premium dashboards -->
+<table>
+<thead>
+<tr>
+<th>MaterialPro Vuetify Admin</th>
+<th>Xtreme Vuesax Pro</th>
+<th>AdminPro Vuetify Dashboard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+  <a href="https://www.wrappixel.com/templates/materialpro-vuetify-admin/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/05/materialpro-vuejs-dashboard-template-20.jpg" alt="MaterialPro Vuetify Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/xtreme-vuesax-admin-pro/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/04/xtreme-vuesax-admin-y.jpg" alt="Xtreme Vuesax Admin" style="max-width:150px;">
+  </a>
+</td>
+<td>
+  <a href="https://www.wrappixel.com/templates/adminpro-vuetify-dashboard/" rel="nofollow" width="150px">
+    <img src="https://www.wrappixel.com/wp-content/uploads/edd/2020/10/adminpro-vuetify-dasboard-template-y.jpg" alt="AdminPro Vuetify Dashboard" style="max-width:150px;">
+  </a>
+</td>
+</tr>
+</tbody>
+</table>
+<!-- Licensing of Template -->
+<h2>Licensing</h2>
+<ul>
+  <li>
+    <p>Copyright 2021 Wrappixel (<a href="https://www.wrappixel.com/" rel="nofollow">https://www.wrappixel.com/</a>)</p>
+  </li>
+  <li>
+    <p>Licensed under MIT (<a href="https://www.wrappixel.com/license/">https://www.wrappixel.com/license/</a>)</p>
+  </li>
+</ul>
 
-* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template/sb-admin/)
-* Install via npm: `npm i startbootstrap-sb-admin`
-* Clone the repo: `git clone https://github.com/StartBootstrap/startbootstrap-sb-admin.git`
-* [Fork, Clone, or Download on GitHub](https://github.com/StartBootstrap/startbootstrap-sb-admin)
+<!-- Useful Links of Template -->
+<h2>Useful Links</h2>
+<ul>
+<li><a href="https://www.wrappixel.com/templates/category/admin-template/">Admin Panel Template</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/">Free Bootstrap 5 Themes</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/templates/category/bootstrap-admin-templates/">Bootstrap 5 Admin Template</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/templates/category/angular-templates/">Angular JS Dashboard</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/templates/category/react-templates/">React Website Templates</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/templates/category/vuejs-templates/">Vue JS Templates</a> from WrapPixel</li>
+<li><a href="https://www.wrappixel.com/templates/category/free-templates/">Free Themes</a> from WrapPixel</li>
+</ul>
 
-## Usage
-
-### Basic Usage
-
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
-
-### Advanced Usage
-
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `scripts/` directory to see which tasks are included with the dev environment.
-
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/StartBootstrap/startbootstrap-sb-admin/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](https://startbootstrap.com/template/sb-admin/).
-
-## Custom Builds
-
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* <https://startbootstrap.com>
-* <https://twitter.com/SBootstrap>
-
-Start Bootstrap was created by and is maintained by **[David Miller](https://davidmiller.io/)**.
-
-* <https://davidmiller.io>
-* <https://twitter.com/davidmillerhere>
-* <https://github.com/davidtmiller>
-
-Start Bootstrap is based on the [Bootstrap](https://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
-
-## Copyright and License
-
-Copyright 2013-2020 Start Bootstrap LLC. Code released under the [MIT](https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/gh-pages/LICENSE) license.
+<!-- Social Media of Wrappixel -->
+<h2>Social Media</h2>
+<p>Facebook: <a href="https://www.facebook.com/wrappixel">https://www.facebook.com/wrappixel</a></p>
+<p>Twitter: <a href="https://twitter.com/wrappixel">https://twitter.com/wrappixel</a></p>
+<p>Medium: <a href="https://medium.com/wrappixel">https://medium.com/wrappixel</a></p>
