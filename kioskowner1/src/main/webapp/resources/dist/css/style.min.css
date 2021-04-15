@@ -323,7 +323,8 @@ button, input, optgroup, select, textarea {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
-    line-height: inherit
+    height: 40px;
+    line-height: inherit;
 }
 
 button, select {
@@ -2402,7 +2403,8 @@ textarea.form-control-lg {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
-    width: 100%
+    width: 100%;
+    justify-content: center;
 }
 
 .input-group > .form-control, .input-group > .form-select {
@@ -4525,7 +4527,8 @@ textarea.form-control-lg {
 .pagination {
     display: flex;
     padding-left: 0;
-    list-style: none
+    list-style: none;
+    justify-content: center;
 }
 
 .page-link {
@@ -10688,7 +10691,8 @@ html[dir=ltr] body .p-l-0 {
 
 .page-wrapper > .container-fluid, .page-wrapper > .container-lg, .page-wrapper > .container-md, .page-wrapper > .container-sm, .page-wrapper > .container-xl, .page-wrapper > .container-xxl {
     padding: 20px;
-    min-height: calc(100vh - 180px)
+    min-height: calc(100vh - 180px);
+    background-color: white;
 }
 
 .footer {
@@ -11169,7 +11173,10 @@ ul.list-style-none li a:hover {
 }
 
 .card-body {
-    padding: 1.25rem
+
+}
+.content-body {
+	padding-top: 3rem;
 }
 
 a {

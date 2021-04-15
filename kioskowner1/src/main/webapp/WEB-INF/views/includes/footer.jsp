@@ -45,7 +45,18 @@
 <script src="/owner/resources/assets/libs/flot/jquery.flot.crosshair.js"></script>
 <script src="/owner/resources/assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
 <script src="/owner/resources/dist/js/pages/chart/chart-page-init.js"></script>
+<!-- table js -->
+<script src="/owner/resources/assets/extra-libs/multicheck/datatable-checkbox-init.js"></script>
+<script src="/owner/resources/assets/extra-libs/multicheck/jquery.multicheck.js"></script>
+<script src="/owner/resources/assets/extra-libs/DataTables/datatables.min.js"></script>
+<script src="/owner/resources/assets/libs/quill/dist/quill.min.js"></script>
 
+
+<script>
+var quill = new Quill('#editor', {
+    theme: 'snow'
+});
+</script>
 </body>
 
 </html>

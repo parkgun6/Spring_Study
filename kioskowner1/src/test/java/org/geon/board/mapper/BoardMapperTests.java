@@ -1,6 +1,12 @@
 package org.geon.board.mapper;
 
-import org.geon.board.domain.BoardVO;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.geon.adminboard.domain.BoardVO;
+import org.geon.adminboard.mapper.BoardMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +32,18 @@ public class BoardMapperTests {
 	
 	@Test
 	public void testGetList() {
+		String[] arr = new String[1];
+		arr[0] = "w";
 		
-		mapper.getList(1,10,3).forEach(board -> log.info(board));
+		mapper.getList(1,10,3,arr,"박건").forEach(board -> log.info(board));
 	}
 	
 	@Test
 	public void testGetTotalCount() {
+		String[] arr = new String[1];
+		arr[0] = "t";
 		
-		log.info(mapper.getTotalCount(3));
+		log.info(mapper.getTotalCount(3,arr,""));
 	}
 	
 	@Test

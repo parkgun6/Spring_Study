@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <head>
     <meta charset="utf-8">
@@ -16,8 +17,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/resources/assets/images/favicon.png">
     <!-- Custom CSS -->
     <link href="${pageContext.request.contextPath}/resources/assets/libs/flot/css/float-chart.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/extra-libs/multicheck/multicheck.css">
+    <link href="${pageContext.request.contextPath}/resources/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/dist/css/style.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/libs/quill/dist/quill.snow.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
