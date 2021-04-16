@@ -20,7 +20,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/extra-libs/multicheck/multicheck.css">
     <link href="${pageContext.request.contextPath}/resources/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/dist/css/style.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/libs/quill/dist/quill.snow.css">
+	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>

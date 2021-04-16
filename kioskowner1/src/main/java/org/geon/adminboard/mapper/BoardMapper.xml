@@ -33,7 +33,7 @@
 		select
 		bano, title, content, writer, regdate, updatedate, category, enabled
 		from (
-		select /*+ INDEX_DESC(tbl_board_admin) */
+		select /*+ INDEX(tbl_board_admin idx_board_admin_category) */
             rownum rn, bano, title, content,writer, regdate, updatedate, category, enabled
          from tbl_board_admin
          where ]]>

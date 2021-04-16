@@ -1,17 +1,21 @@
 package org.geon.adminboard.domain;
 
 import java.sql.Date;
+import java.util.List;
 
+import org.geon.common.dto.AttachFileDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
-@Data
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 public class BoardVO {
 
 	private Long bano;
@@ -20,4 +24,7 @@ public class BoardVO {
 	private Date regdate, updateDate;
 	private Boolean enabled;
 	
+	
+	private List<AttachFileDTO> fileList;
+
 }

@@ -100,7 +100,7 @@ document.querySelectorAll(".listA").forEach(a => {
 		e.preventDefault();
 		const bano = e.target.getAttribute("href");
 		
-		actionForm.setAttribute("action","read");
+		actionForm.setAttribute("action","qna/read");
 		actionForm.innerHTML += "<input type='hidden' name='bano' value='"+bano+"'>";
 		actionForm.submit();
 	},false);

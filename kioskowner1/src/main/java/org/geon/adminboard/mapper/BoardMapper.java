@@ -7,7 +7,7 @@ import org.geon.adminboard.domain.BoardVO;
 
 public interface BoardMapper {
 
-	BoardVO read(Long bno);
+	BoardVO read(Long bano);
 	
 	List<BoardVO> getList(@Param("page") int page,
 						  @Param("perSheet") int perSheet,
@@ -27,5 +27,7 @@ public interface BoardMapper {
 	
 	void update(BoardVO board);
 	
-	void delete(Long bno);
+	void delete(Long bano);
+	
+	List<BoardVO> findByBano(Long bano);
 }

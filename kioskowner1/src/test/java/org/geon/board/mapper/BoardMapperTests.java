@@ -35,7 +35,7 @@ public class BoardMapperTests {
 		String[] arr = new String[1];
 		arr[0] = "w";
 		
-		mapper.getList(1,10,3,arr,"박건").forEach(board -> log.info(board));
+		mapper.getList(1,10,1,arr,"").forEach(board -> log.info(board));
 	}
 	
 	@Test

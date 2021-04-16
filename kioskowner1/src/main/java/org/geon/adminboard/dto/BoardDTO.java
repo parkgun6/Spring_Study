@@ -1,6 +1,9 @@
 package org.geon.adminboard.dto;
 
 import java.sql.Date;
+import java.util.List;
+
+import org.geon.common.dto.AttachFileDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,4 +23,6 @@ public class BoardDTO {
 	private Date regdate, updateDate;
 	private Boolean enabled;
 	
+	private List<AttachFileDTO> fileList;
+
 }

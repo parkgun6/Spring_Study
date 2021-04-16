@@ -52,14 +52,24 @@ public class CustomerController {
 
 	}
 
-	@GetMapping({ "/read", "/modify" })
-	public void read(PageDTO pageDTO, Long bano, Model model) {
+	@GetMapping({ "/{board}/read", "/modify" })
+	public void read(@PathVariable String board, PageDTO pageDTO, Long bano, Model model) {
 		log.info("bano : " + bano);
 		log.info("PageDTO : " + pageDTO);
+		
+		Integer category = 0;
 
+		log.info(board);
+
+		if (board.equals("faq")) {
+			category = 2;
+		} else if (board.equals("qna")) {
+			category = 3;
+		}
+		
 		model.addAttribute("board", service.readOne(bano));
-		model.addAttribute("list", service.getPageList(pageDTO, 1));
-		model.addAttribute("pageMaker", new PageMaker(pageDTO, service.getTotalCount(pageDTO, 1)));
+		model.addAttribute("list", service.getPageList(pageDTO, category));
+		model.addAttribute("pageMaker", new PageMaker(pageDTO, service.getTotalCount(pageDTO, category)));
 	}
 
 	@PostMapping(value = "/register", produces = { "text/plain" })
