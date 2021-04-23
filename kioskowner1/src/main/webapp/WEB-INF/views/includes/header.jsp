@@ -21,6 +21,11 @@
     <link href="${pageContext.request.contextPath}/resources/assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/dist/css/style.min.css" rel="stylesheet">
 	<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+	    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/libs/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/assets/libs/jquery-minicolors/jquery.minicolors.css">
+    <link rel="stylesheet" type="text/css"
+        href="${pageContext.request.contextPath}/resources/assets/libs/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -255,7 +260,7 @@
                 <ul id="sidebarnav" class="pt-4">
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="/owner/main" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                            class="hide-menu">Dashboard</span></a></li>
+                            class="hide-menu">메인페이지</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
                                                  href="/owner/sales/main" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span
                             class="hide-menu">통계</span></a></li>
@@ -266,8 +271,8 @@
                                                  href="/owner/news/notice" aria-expanded="false"><i class="mdi mdi-border-inside"></i><span
                             class="hide-menu">공지사항</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="grid.html" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span
-                            class="hide-menu">Full Width</span></a></li>
+                                                 href="/owner/myshop/user00/intro" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span
+                            class="hide-menu">내 가게</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                                  href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-receipt"></i><span
                             class="hide-menu">고객지원 </span></a>
@@ -284,21 +289,6 @@
                                                  href="/owner/sales/main" aria-expanded="false"><i
                             class="mdi mdi-relative-scale"></i><span class="hide-menu">통계</span></a></li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                            class="hide-menu">Icons </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="icon-material.html" class="sidebar-link"><i
-                                    class="mdi mdi-emoticon"></i><span class="hide-menu"> Material Icons
-                                        </span></a></li>
-                            <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><i
-                                    class="mdi mdi-emoticon-cool"></i><span class="hide-menu"> Font Awesome
-                                            Icons </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                                 href="pages-elements.html" aria-expanded="false"><i class="mdi mdi-pencil"></i><span
-                            class="hide-menu">Elements</span></a></li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                                  href="javascript:void(0)" aria-expanded="false"><i
                             class="mdi mdi-move-resize-variant"></i><span class="hide-menu">커뮤니티 </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
@@ -309,31 +299,13 @@
                     </li>
                     <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                                  href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-key"></i><span
-                            class="hide-menu">Authentication </span></a>
+                            class="hide-menu">가게 설정 </span></a>
                         <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="authentication-login.html" class="sidebar-link"><i
-                                    class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Login </span></a>
+                            <li class="sidebar-item"><a href="/owner/myshop/store" class="sidebar-link"><i
+                                    class="mdi mdi-all-inclusive"></i><span class="hide-menu"> 가게 정보 변경 </span></a>
                             </li>
-                            <li class="sidebar-item"><a href="authentication-register.html" class="sidebar-link"><i
-                                    class="mdi mdi-all-inclusive"></i><span class="hide-menu"> Register
-                                        </span></a></li>
-                        </ul>
-                    </li>
-                    <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
-                                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-alert"></i><span
-                            class="hide-menu">Errors </span></a>
-                        <ul aria-expanded="false" class="collapse  first-level">
-                            <li class="sidebar-item"><a href="error-403.html" class="sidebar-link"><i
-                                    class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 403
-                                        </span></a></li>
-                            <li class="sidebar-item"><a href="error-404.html" class="sidebar-link"><i
-                                    class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 404
-                                        </span></a></li>
-                            <li class="sidebar-item"><a href="error-405.html" class="sidebar-link"><i
-                                    class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 405
-                                        </span></a></li>
-                            <li class="sidebar-item"><a href="error-500.html" class="sidebar-link"><i
-                                    class="mdi mdi-alert-octagon"></i><span class="hide-menu"> Error 500
+                            <li class="sidebar-item"><a href="/owner/myshop/menu" class="sidebar-link"><i
+                                    class="mdi mdi-all-inclusive"></i><span class="hide-menu"> 메뉴 정보 변경
                                         </span></a></li>
                         </ul>
                     </li>

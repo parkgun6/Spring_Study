@@ -5,9 +5,11 @@ import java.util.stream.Collectors;
 
 import org.geon.adminboard.domain.BoardVO;
 import org.geon.adminboard.dto.BoardDTO;
+import org.geon.adminboard.mapper.BoardAttachMapper;
 import org.geon.adminboard.mapper.BoardMapper;
 import org.geon.common.dto.PageDTO;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
@@ -18,6 +20,8 @@ import lombok.extern.log4j.Log4j;
 public class BoardServiceImpl implements BoardService {
 
 	private final BoardMapper mapper;
+	
+	private final BoardAttachMapper attachMapper;
 	
 	@Override
 	public List<BoardDTO> getPageList(PageDTO pageDTO,Integer category) {
@@ -39,11 +43,23 @@ public class BoardServiceImpl implements BoardService {
 				pageDTO.getKeyword());
 	}
 
+	@Transactional
 	@Override
 	public void register(BoardDTO boardDTO) {
 		BoardVO board = toDomain(boardDTO);
-		log.info(board);
-		mapper.insert(board);
+		log.info("insertSelectKey : "+board);
+		mapper.insertSelectKey(board);
+		
+		if(board.getFileList() == null || board.getFileList().size() <= 0) {
+			return;
+		}
+		
+		board.getFileList().forEach(attach -> {
+			log.info(attach);
+			attach.setBano(board.getBano());
+			log.info(attach);
+			attachMapper.insert(attach);
+		});
 	}
 
 	@Override
@@ -57,6 +73,17 @@ public class BoardServiceImpl implements BoardService {
 		log.info(board);
 		
 		mapper.update(board);
+		
+		if(board.getFileList() == null || board.getFileList().size() <= 0) {
+			return;
+		}
+		
+		board.getFileList().forEach(attach -> {
+			log.info(attach);
+			attach.setBano(board.getBano());
+			log.info(attach);
+			attachMapper.insert(attach);
+		});
 	}
 
 	@Override
@@ -64,6 +91,7 @@ public class BoardServiceImpl implements BoardService {
 		mapper.delete(bano);
 	}
 
+	
 	
 	
 }

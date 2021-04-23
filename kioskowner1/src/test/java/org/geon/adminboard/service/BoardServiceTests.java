@@ -1,4 +1,4 @@
-package org.geon.board.service;
+package org.geon.adminboard.service;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 

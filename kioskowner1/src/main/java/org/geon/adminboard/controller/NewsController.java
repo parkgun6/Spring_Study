@@ -62,6 +62,11 @@ public class NewsController {
 		
 		log.info("dto : " + dto);
 		
+		if(dto.getFileList() != null) {
+			dto.getFileList().forEach(attach -> log.info(attach));
+		}
+		
+		
 		if(result.hasErrors()) {
 			log.info(result.getAllErrors());
 			return new ResponseEntity<String>("failed", HttpStatus.INTERNAL_SERVER_ERROR);

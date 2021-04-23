@@ -12,7 +12,19 @@
 	
 	<insert id="insert">
 	<![CDATA[
-		insert into tbl_board_admin (bano, title, content, writer, category) VALUES (seq_board_admin.nextval,#{title},#{content},#{writer},#{category})
+		insert into tbl_board_admin (bano, title, content, writer, category)
+		 VALUES (seq_board_admin.nextval,#{title},#{content},#{writer},#{category})
+	]]>
+	</insert>
+	
+	<insert id="insertSelectKey">
+	<selectKey keyProperty="bano" order="BEFORE" resultType="long">
+		select seq_board_admin.nextval from dual
+	</selectKey>
+	
+	<![CDATA[
+		insert into tbl_board_admin (bano, title, content, writer, category)
+		 VALUES (#{bano},#{title},#{content},#{writer},#{category})
 	]]>
 	</insert>
 	
@@ -24,7 +36,7 @@
 	
 	<update id="delete">
 	<![CDATA[
-		update tbl_board_admin set enabled=0 where bano = #{bano}
+		update tbl_board_admin set enabled=0,updateDate = sysdate where bano = #{bano}
 	]]>
 	</update>
 	

@@ -144,7 +144,12 @@ hr:not([size]) {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem
+    margin-bottom: 1rem;
+    display: block;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 abbr[data-bs-original-title], abbr[title] {
@@ -1895,6 +1900,25 @@ progress {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out
 }
 
+.form-controlInfo {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #3e5569;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #e9ecef;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 2px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border: none;
+}
+
+
 @media (prefers-reduced-motion: reduce) {
     .form-control {
         transition: none
@@ -1928,8 +1952,7 @@ progress {
 }
 
 .form-control:disabled, .form-control[readonly] {
-    background-color: #e9ecef;
-    opacity: 1
+    opacity: 1;
 }
 
 .form-control::file-selector-button {
@@ -2040,7 +2063,8 @@ progress {
 }
 
 textarea.form-control {
-    min-height: calc(1.5em + 0.75rem + 2px)
+    min-height: calc(1.5em + 0.75rem + 2px);
+    border: none;
 }
 
 textarea.form-control-sm {
@@ -2747,7 +2771,7 @@ textarea.form-control-lg {
 }
 
 .btn-success {
-    color: #000;
+    color: white;
     background-color: #28b779;
     border-color: #28b779
 }
@@ -2852,9 +2876,10 @@ textarea.form-control-lg {
 }
 
 .btn-danger {
-    color: #000;
+    color: white;
     background-color: #da542e;
-    border-color: #da542e
+    border-color: #da542e;
+    float: right;
 }
 
 .btn-danger:hover {
@@ -4263,7 +4288,8 @@ textarea.form-control-lg {
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1rem 1rem
+    padding: 1rem 1rem;
+    margin-top: 60px;
 }
 
 .card-title {
@@ -7448,7 +7474,8 @@ textarea.form-control-lg {
 }
 
 .text-muted {
-    color: #a1aab2 !important
+    color: black;
+    padding-top: 10px;
 }
 
 .text-black-50 {
@@ -7488,7 +7515,8 @@ textarea.form-control-lg {
 }
 
 .bg-success {
-    background-color: #28b779 !important
+    background-color: #28b779 !important;
+    cursor: pointer;
 }
 
 .bg-info {
@@ -7496,11 +7524,13 @@ textarea.form-control-lg {
 }
 
 .bg-warning {
-    background-color: #ffb848 !important
+    background-color: #ffb848 !important;
+    cursor: pointer;
 }
 
 .bg-danger {
-    background-color: #da542e !important
+    background-color: #da542e !important;
+    cursor: pointer;
 }
 
 .bg-light {
@@ -7512,7 +7542,8 @@ textarea.form-control-lg {
 }
 
 .bg-cyan {
-    background-color: #27a9e3 !important
+    background-color: #27a9e3 !important;
+    cursor: pointer;
 }
 
 .bg-orange {
@@ -11183,7 +11214,6 @@ ul.list-style-none li a:hover {
 
 }
 .content-body {
-	padding-top: 3rem;
 }
 
 .user-info {
@@ -11221,7 +11251,8 @@ label {
 }
 
 .table td, .table th {
-    padding: 1rem
+    padding: 1rem;
+    text-align: center;
 }
 
 .card-subtitle {
@@ -11244,7 +11275,7 @@ label {
 }
 
 .form-control, .form-select {
-    height: calc(1.5em + 0.75rem + 2px)
+    height: calc(1.5em + 0.75rem + 2px);
 }
 
 textarea.form-control {
@@ -11545,7 +11576,9 @@ select.form-select.form-control-line {
 }
 
 .table th, .table thead th {
-    font-weight: 500
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .nowrap {
@@ -13620,7 +13653,6 @@ body .jqstooltip {
 }
 
 .select2-container--classic .select2-selection--multiple .select2-selection__choice, .select2-container--default .select2-selection--multiple .select2-selection__choice, .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    background-color: #2255a4;
     border-color: #2255a4;
     color: #fff
 }
@@ -14076,7 +14108,8 @@ label {
 
 .el-element-overlay .el-card-item {
     position: relative;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    background-color: floralwhite;
 }
 
 .el-element-overlay .el-card-item .el-card-avatar {
@@ -14153,7 +14186,8 @@ label {
     left: 0;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: all 0.4s ease-in-out
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
 }
 
 .el-element-overlay .el-card-item .el-overlay-1:hover .el-overlay {

@@ -25,6 +25,8 @@ public interface BoardMapper {
 	
 	void insert(BoardVO board);
 	
+	void insertSelectKey(BoardVO board);
+	
 	void update(BoardVO board);
 	
 	void delete(Long bano);

@@ -20,6 +20,7 @@ public interface BoardService {
 	
 	void delete(Long bano);
 	
+	
 	default BoardVO toDomain(BoardDTO dto) {
 		return BoardVO.builder()
 			.bano(dto.getBano())
@@ -29,7 +30,10 @@ public interface BoardService {
 			.category(dto.getCategory())
 			.enabled(dto.getEnabled())
 			.regdate(dto.getRegdate())
-			.updateDate(dto.getUpdateDate()).build();
+			.updateDate(dto.getUpdateDate())
+			.fileList(dto.getFileList())
+			.build();
+			
 	}
 	
 	default BoardDTO toDTO(BoardVO board) {
@@ -43,6 +47,7 @@ public interface BoardService {
 		dto.setEnabled(board.getEnabled());
 		dto.setRegdate(board.getRegdate());
 		dto.setUpdateDate(board.getUpdateDate());
+		dto.setFileList(board.getFileList());
 		return dto;
 	}
 }

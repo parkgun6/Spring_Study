@@ -1,4 +1,4 @@
-package org.geon.board.mapper;
+package org.geon.adminboard.mapper;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.log;
 
@@ -50,7 +50,7 @@ public class BoardMapperTests {
 	public void testInsert() {
 		BoardVO board = BoardVO.builder().title("testinsert.....").content("test.....").writer("박건").category(1).build();
 		
-		mapper.insert(board);
+		mapper.insertSelectKey(board);
 	}
 
 	@Test

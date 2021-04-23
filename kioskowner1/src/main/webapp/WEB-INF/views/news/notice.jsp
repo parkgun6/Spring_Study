@@ -53,8 +53,7 @@
 		<option value='c' ${pageDTO.type == "c"?"selected":"" }>내용</option>
 		<option value='w' ${pageDTO.type == "w"?"selected":"" }>작성자</option>
 
-</select>
- <span class="input-group-append"> <input type="text"
+</select> <span class="input-group-append"> <input type="text"
 		class="searchInput" name='skeyword' placeholder="Search for..."
 		value='${pageDTO.keyword }'> <span class="input-group-append">
 			<button class="btn searchBtn btn-search" type="button">

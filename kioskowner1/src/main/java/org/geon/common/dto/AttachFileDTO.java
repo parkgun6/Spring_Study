@@ -16,8 +16,9 @@ public class AttachFileDTO {
 	private String uploadPath;
 	private String uuid;
 	private boolean image;
-	
-	
+	private Long bano;
+	private Long sno;
+	private Long mno;
 	
 	public String getLink() {
 		
@@ -41,5 +42,12 @@ public class AttachFileDTO {
 		
 		
 		return enStr;
+	}
+	public AttachFileDTO(String fileName, String uploadPath, String uuid, boolean image) {
+		super();
+		this.fileName = fileName;
+		this.uploadPath = uploadPath;
+		this.uuid = uuid;
+		this.image = image;
 	}
 }
