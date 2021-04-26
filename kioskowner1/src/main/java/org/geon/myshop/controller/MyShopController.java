@@ -1,10 +1,8 @@
 package org.geon.myshop.controller;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
 import javax.validation.Valid;
 
-import org.geon.adminboard.dto.BoardDTO;
 import org.geon.myshop.dto.MenuDTO;
 import org.geon.myshop.dto.MyShopDTO;
 import org.geon.myshop.service.MyShopService;

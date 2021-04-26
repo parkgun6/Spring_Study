@@ -28,12 +28,11 @@
 	</beans:bean>
 	
 	
-	
+	<context:component-scan base-package="org.geon.common.controller" />
 	<context:component-scan base-package="org.geon.adminboard.controller" />
 	<context:component-scan base-package="org.geon.business.controller" />
 	<context:component-scan base-package="org.geon.myshop.controller" />
-	
-	<context:component-scan base-package="org.geon.common.controller" />
+
 	
 	
 </beans:beans>
