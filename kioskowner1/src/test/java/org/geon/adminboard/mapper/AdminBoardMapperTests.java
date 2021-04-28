@@ -5,8 +5,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import java.util.ArrayList;
 import java.util.List;
 
-import org.geon.adminboard.domain.BoardVO;
-import org.geon.adminboard.mapper.BoardMapper;
+import org.geon.adminboard.domain.AdminBoardVO;
+import org.geon.adminboard.mapper.AdminBoardMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,10 +18,10 @@ import lombok.extern.log4j.Log4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
-public class BoardMapperTests {
+public class AdminBoardMapperTests {
 	
 	@Autowired
-	BoardMapper mapper;
+	AdminBoardMapper mapper;
 	
 	@Test
 	public void read() {
@@ -48,14 +48,14 @@ public class BoardMapperTests {
 	
 	@Test
 	public void testInsert() {
-		BoardVO board = BoardVO.builder().title("testinsert.....").content("test.....").writer("박건").category(1).build();
+		AdminBoardVO board = AdminBoardVO.builder().title("testinsert.....").content("test.....").writer("박건").category(1).build();
 		
 		mapper.insertSelectKey(board);
 	}
 
 	@Test
 	public void testUpdate() {
-		BoardVO board = BoardVO.builder().bano(15L).title("testinsert.....").content("test.....").writer("박건").category(1).build();
+		AdminBoardVO board = AdminBoardVO.builder().bano(15L).title("testinsert.....").content("test.....").writer("박건").category(1).build();
 		
 		mapper.update(board);
 	}

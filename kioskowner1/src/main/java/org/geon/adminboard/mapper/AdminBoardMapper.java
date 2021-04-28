@@ -3,13 +3,13 @@ package org.geon.adminboard.mapper;
 import java.util.List;
 
 import org.apache.ibatis.annotations.Param;
-import org.geon.adminboard.domain.BoardVO;
+import org.geon.adminboard.domain.AdminBoardVO;
 
-public interface BoardMapper {
+public interface AdminBoardMapper {
 
-	BoardVO read(Long bano);
+	AdminBoardVO read(Long bano);
 	
-	List<BoardVO> getList(@Param("page") int page,
+	List<AdminBoardVO> getList(@Param("page") int page,
 						  @Param("perSheet") int perSheet,
 						  @Param("category") int category ,
 						  @Param("arr") String[] arr ,
@@ -22,14 +22,11 @@ public interface BoardMapper {
 					  @Param("keyword") String keyword
 					  );
 	
+	void insertSelectKey(AdminBoardVO board);
 	
-	void insert(BoardVO board);
-	
-	void insertSelectKey(BoardVO board);
-	
-	void update(BoardVO board);
+	void update(AdminBoardVO board);
 	
 	void delete(Long bano);
 	
-	List<BoardVO> findByBano(Long bano);
+	List<AdminBoardVO> findByBano(Long bano);
 }

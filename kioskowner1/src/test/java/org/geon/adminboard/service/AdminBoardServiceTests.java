@@ -4,9 +4,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 import java.util.List;
 
-import org.geon.adminboard.domain.BoardVO;
-import org.geon.adminboard.dto.BoardDTO;
-import org.geon.adminboard.service.BoardService;
+import org.geon.adminboard.domain.AdminBoardVO;
+import org.geon.adminboard.dto.AdminBoardDTO;
+import org.geon.adminboard.service.AdminBoardService;
 import org.geon.common.dto.PageDTO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,15 +19,15 @@ import lombok.extern.log4j.Log4j;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("file:src/main/webapp/WEB-INF/spring/root-context.xml")
 @Log4j
-public class BoardServiceTests {
+public class AdminBoardServiceTests {
 
 	@Autowired
-	BoardService service;
+	AdminBoardService service;
 	
 	@Test
 	public void testGetPageList() {
 
-		List<BoardDTO> list = service.getPageList(
+		List<AdminBoardDTO> list = service.getPageList(
 				new PageDTO(1,10),1);
 		
 		list.forEach(vo -> {
@@ -43,7 +43,7 @@ public class BoardServiceTests {
 	
 	@Test
 	public void testInsert() {
-		BoardDTO dto = BoardDTO.builder()
+		AdminBoardDTO dto = AdminBoardDTO.builder()
 				.title("testInsert....")
 				.content("testContent.....")
 				.writer("박건..")
@@ -54,7 +54,7 @@ public class BoardServiceTests {
 	
 	@Test
 	public void testUpdate() {
-		BoardDTO dto = BoardDTO.builder()
+		AdminBoardDTO dto = AdminBoardDTO.builder()
 				.bano(18227L)
 				.title("test update....")
 				.content("testContent.....")

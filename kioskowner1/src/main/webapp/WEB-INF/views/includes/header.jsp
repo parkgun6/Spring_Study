@@ -234,9 +234,17 @@
 						<!-- ============================================================== -->
 						<!-- User profile and search -->
 						<!-- ============================================================== -->
-						<li class="nav-item dropdown"><sec:authentication property="principal.username"/>
-						님 환영합니다.<a
-							class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
+						<li class="nav-item dropdown">
+							<sec:authorize access="isAnonymous()">
+								<a href="/owner/login" target="_self">Login</a>
+							</sec:authorize>
+							<sec:authentication property="principal" var="pinfo" /> 
+							<sec:authorize access="isAuthenticated()">
+								<c:if test="${pinfo.username ne null }">
+									<sec:authentication property="principal.username"/>
+									님 환영합니다.
+								</c:if>
+							</sec:authorize> <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
 							href="#" id="navbarDropdown" role="button"
 							data-bs-toggle="dropdown" aria-expanded="false"> <img
 								src="/owner/resources/assets/images/users/1.jpg" alt="user"
@@ -254,6 +262,10 @@
 								<a class="dropdown-item" href="javascript:void(0)"><i
 									class="ti-settings me-1 ms-1"></i> Account Setting</a>
 								<div class="dropdown-divider"></div>
+								<form method="post" action="/owner/logout">
+									<input type='hidden' name="_csrf" value="${_csrf.token }">
+									<button>LOGOUT</button>
+								</form>
 								<a class="dropdown-item" href="/owner/logout"><i
 									class="fa fa-power-off me-1 ms-1"></i> Logout</a>
 								<div class="dropdown-divider"></div>
@@ -301,7 +313,7 @@
 								class="mdi mdi-border-inside"></i><span class="hide-menu">공지사항</span></a></li>
 						<li class="sidebar-item"><a
 							class="sidebar-link waves-effect waves-dark sidebar-link"
-							href="/owner/myshop/<sec:authentication property="principal.username"/>/intro" aria-expanded="false"><i
+							href="/owner/myshop/<sec:authentication property="principal" var="pinfo" /><sec:authorize access="isAuthenticated()"><c:if test="${pinfo.username ne null }"><sec:authentication property="principal.username"/></c:if></sec:authorize>/intro" aria-expanded="false"><i
 								class="mdi mdi-blur-linear"></i><span class="hide-menu">내
 									가게</span></a></li>
 						<li class="sidebar-item"><a
@@ -317,10 +329,6 @@
 									class="sidebar-link"><i class="mdi mdi-note-plus"></i><span
 										class="hide-menu">Q&A 게시판 </span></a></li>
 							</ul></li>
-						<li class="sidebar-item"><a
-							class="sidebar-link waves-effect waves-dark sidebar-link"
-							href="/owner/sales/main" aria-expanded="false"><i
-								class="mdi mdi-relative-scale"></i><span class="hide-menu">통계</span></a></li>
 						<li class="sidebar-item"><a
 							class="sidebar-link has-arrow waves-effect waves-dark"
 							href="javascript:void(0)" aria-expanded="false"><i
@@ -348,3 +356,4 @@
 			<!-- Bread crumb and right sidebar toggle -->
 			<!-- ============================================================== -->
 			<div class="container-fluid">
+			<input type='hidden' name="_csrf" value="${_csrf.token }">

@@ -2,8 +2,8 @@ package org.geon.adminboard.controller;
 
 import javax.validation.Valid;
 
-import org.geon.adminboard.dto.BoardDTO;
-import org.geon.adminboard.service.BoardService;
+import org.geon.adminboard.dto.AdminBoardDTO;
+import org.geon.adminboard.service.AdminBoardService;
 import org.geon.common.dto.PageDTO;
 import org.geon.common.dto.PageMaker;
 import org.springframework.http.HttpStatus;
@@ -28,7 +28,7 @@ import lombok.extern.log4j.Log4j;
 @RequiredArgsConstructor
 public class CustomerController {
 
-	private final BoardService service;
+	private final AdminBoardService service;
 
 	@GetMapping({ "/{board}" })
 	public void list(@PathVariable String board, @ModelAttribute("pageDTO") PageDTO pageDTO, Model model) {
@@ -74,7 +74,7 @@ public class CustomerController {
 
 	@PostMapping(value = "/register", produces = { "text/plain" })
 	@ResponseBody
-	public ResponseEntity<String> registerPost(@RequestBody @Valid BoardDTO dto, BindingResult result) {
+	public ResponseEntity<String> registerPost(@RequestBody @Valid AdminBoardDTO dto, BindingResult result) {
 
 		log.info("dto : " + dto);
 
@@ -90,7 +90,7 @@ public class CustomerController {
 
 	@PostMapping(value = "/modify", produces = { "application/json" })
 	@ResponseBody
-	public ResponseEntity<String> updatePost(@RequestBody @Valid BoardDTO dto, BindingResult result) {
+	public ResponseEntity<String> updatePost(@RequestBody @Valid AdminBoardDTO dto, BindingResult result) {
 
 		log.info("dto :" + dto);
 

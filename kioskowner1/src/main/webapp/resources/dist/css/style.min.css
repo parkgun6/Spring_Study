@@ -142,6 +142,10 @@ hr:not([size]) {
     font-size: 0.875rem
 }
 
+.panel.panel-default {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
 p {
     margin-top: 0;
     margin-bottom: 1rem;
@@ -168,12 +172,13 @@ address {
 }
 
 ol, ul {
-    padding-left: 2rem
+    padding-left: 0rem
 }
 
 dl, ol, ul {
     margin-top: 0;
     margin-bottom: 1rem;
+    list-style: none;
 }
 
 .li-attach{
@@ -2984,7 +2989,9 @@ textarea.form-control-lg {
 .btn-cyan {
     color: #000;
     background-color: #27a9e3;
-    border-color: #27a9e3
+    border-color: #27a9e3;
+    float: right;
+    margin-right: 25px;
 }
 
 .btn-cyan:hover {
@@ -4290,6 +4297,7 @@ textarea.form-control-lg {
     flex: 1 1 auto;
     padding: 1rem 1rem;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .card-title {
@@ -11657,6 +11665,16 @@ select.form-select.form-control-line {
     align-items: center;
     line-height: 25px;
     opacity: 0.6
+}
+
+.replyDiv {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 0.5rem;
+}
+
+.replyArea {
+    border: 3px solid rgba(0, 0, 0, 0.03);
 }
 
 .sidebar-nav ul .sidebar-item .sidebar-link i {

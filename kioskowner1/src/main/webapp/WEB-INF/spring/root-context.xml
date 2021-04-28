@@ -44,6 +44,7 @@
 	<mybatis-spring:scan
 		base-package="org.geon.*.mapper" />
 	<context:component-scan base-package="org.geon.*.service"></context:component-scan>
+	<context:component-scan base-package="org.geon.*.*.service"></context:component-scan>
 		
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 		

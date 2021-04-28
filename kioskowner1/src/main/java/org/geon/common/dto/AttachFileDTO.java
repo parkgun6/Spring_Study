@@ -17,6 +17,7 @@ public class AttachFileDTO {
 	private String uuid;
 	private boolean image;
 	private Long bano;
+	private Long buno;
 	private Long sno;
 	private Long mno;
 	

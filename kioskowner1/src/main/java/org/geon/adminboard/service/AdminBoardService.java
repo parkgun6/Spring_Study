@@ -2,27 +2,27 @@ package org.geon.adminboard.service;
 
 import java.util.List;
 
-import org.geon.adminboard.domain.BoardVO;
-import org.geon.adminboard.dto.BoardDTO;
+import org.geon.adminboard.domain.AdminBoardVO;
+import org.geon.adminboard.dto.AdminBoardDTO;
 import org.geon.common.dto.PageDTO;
 
-public interface BoardService {
+public interface AdminBoardService {
 
-	List<BoardDTO> getPageList(PageDTO pageDTO,Integer category);
+	List<AdminBoardDTO> getPageList(PageDTO pageDTO,Integer category);
 	
 	int getTotalCount(PageDTO pageDTO, Integer category);
 	
-	void register(BoardDTO boardDTO);
+	void register(AdminBoardDTO boardDTO);
 	
-	BoardDTO readOne(Long bano);
+	AdminBoardDTO readOne(Long bano);
 	
-	void update(BoardDTO boardDTO);
+	void update(AdminBoardDTO boardDTO);
 	
 	void delete(Long bano);
 	
 	
-	default BoardVO toDomain(BoardDTO dto) {
-		return BoardVO.builder()
+	default AdminBoardVO toDomain(AdminBoardDTO dto) {
+		return AdminBoardVO.builder()
 			.bano(dto.getBano())
 			.title(dto.getTitle())
 			.content(dto.getContent())
@@ -36,9 +36,9 @@ public interface BoardService {
 			
 	}
 	
-	default BoardDTO toDTO(BoardVO board) {
+	default AdminBoardDTO toDTO(AdminBoardVO board) {
 
-		BoardDTO dto = new BoardDTO();
+		AdminBoardDTO dto = new AdminBoardDTO();
 		dto.setBano(board.getBano());
 		dto.setTitle(board.getTitle());
 		dto.setContent(board.getContent());

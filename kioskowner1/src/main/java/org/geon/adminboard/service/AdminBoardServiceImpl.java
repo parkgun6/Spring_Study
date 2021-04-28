@@ -3,10 +3,10 @@ package org.geon.adminboard.service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.geon.adminboard.domain.BoardVO;
-import org.geon.adminboard.dto.BoardDTO;
-import org.geon.adminboard.mapper.BoardAttachMapper;
-import org.geon.adminboard.mapper.BoardMapper;
+import org.geon.adminboard.domain.AdminBoardVO;
+import org.geon.adminboard.dto.AdminBoardDTO;
+import org.geon.adminboard.mapper.AdminBoardAttachMapper;
+import org.geon.adminboard.mapper.AdminBoardMapper;
 import org.geon.common.dto.PageDTO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,14 +17,14 @@ import lombok.extern.log4j.Log4j;
 @Service
 @RequiredArgsConstructor
 @Log4j
-public class BoardServiceImpl implements BoardService {
+public class AdminBoardServiceImpl implements AdminBoardService {
 
-	private final BoardMapper mapper;
+	private final AdminBoardMapper mapper;
 	
-	private final BoardAttachMapper attachMapper;
+	private final AdminBoardAttachMapper attachMapper;
 	
 	@Override
-	public List<BoardDTO> getPageList(PageDTO pageDTO,Integer category) {
+	public List<AdminBoardDTO> getPageList(PageDTO pageDTO,Integer category) {
 		
 		return mapper.getList(
 				pageDTO.getPage(), 
@@ -45,8 +45,8 @@ public class BoardServiceImpl implements BoardService {
 
 	@Transactional
 	@Override
-	public void register(BoardDTO boardDTO) {
-		BoardVO board = toDomain(boardDTO);
+	public void register(AdminBoardDTO boardDTO) {
+		AdminBoardVO board = toDomain(boardDTO);
 		log.info("insertSelectKey : "+board);
 		mapper.insertSelectKey(board);
 		
@@ -63,13 +63,13 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardDTO readOne(Long bano) {
+	public AdminBoardDTO readOne(Long bano) {
 		return toDTO(mapper.read(bano));
 	}
 
 	@Override
-	public void update(BoardDTO boardDTO) {
-		BoardVO board = toDomain(boardDTO);
+	public void update(AdminBoardDTO boardDTO) {
+		AdminBoardVO board = toDomain(boardDTO);
 		log.info(board);
 		
 		mapper.update(board);
