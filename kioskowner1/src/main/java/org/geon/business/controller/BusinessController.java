@@ -12,8 +12,13 @@ import lombok.extern.log4j.Log4j;
 public class BusinessController {
 
 	
-	@GetMapping({"/","/main"})
-	public void test() {
-		log.info("test......................");
+	@GetMapping({"/","/order"})
+	public void order() {
+		log.info("order......................");
+	}
+	
+	@GetMapping({"/finish"})
+	public void finish() {
+		log.info("finish......................");
 	}
 }

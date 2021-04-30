@@ -11,12 +11,12 @@
 <script src="/owner/resources/js/firebaseConfig.js"></script>
 <div class="container-fluid">
 	<h1 class="mt-4"></h1>
-	<div class="timeZone">
-	</div>
+	<div class="timeZone"></div>
 	<div class="row">
 		<div class="col-md-6 col-lg-4 col-xlg-3">
 			<div class="card card-hover">
 				<div class="box bg-cyan text-center">
+				    <a class='big text-white stretched-link' href='/owner/business/order'></a>
 					<h1 class="font-light text-white">
 						<i class="mdi mdi-chart-areaspline"></i>
 					</h1>
@@ -27,6 +27,7 @@
 		<div class="col-md-6 col-lg-4 col-xlg-3">
 			<div class="card card-hover">
 				<div class="box bg-cyan text-center">
+					<a class='big text-white stretched-link' href='/owner/business/finish'></a>
 					<h1 class="font-light text-white">
 						<i class="mdi mdi-chart-areaspline"></i>
 					</h1>
@@ -47,8 +48,7 @@
 		<ol class="breadcrumb mb-4">
 		</ol>
 		<div class="container-fluid">
-			<div class="row new-order">
-			</div>
+			<div class="row new-order"></div>
 		</div>
 	</div>
 </div>
@@ -100,40 +100,55 @@
 	                console.log(jsonData.order[i])
 	            }
 	
-	            //newOrder.innerHTML += jsonData.store;
-	            let str = "";
-	            str += "<div class='col-xl-3 col-md-6'>"
-	            str += "	<div class='card card-hover' onclick='clickTest()'>"
-	            str += "		<div class='card bg-success text-white mb-4'>"
-	            str += "			<div class='card-order font-big'>"
-	
-	            for (let i = 0, len = jsonData.order.length || 0; i < len; i++) {
-	
-	                console.log(jsonData.order[i])
-	                str += "				<div>" + jsonData.order[i].menu + " " + jsonData.order[i].quantity + "개</div>"
-	            }
-	
-	            str += "				<div>주문번호: " + jsonData.orderNum + "</div>"
-	            str += "				<div>" + time + "</div>"
-	            str += "			</div>"
-	            str += "			<div class='card-footer d-flex align-items-center justify-content-between'>"
-	            str += "				<a class='big text-white stretched-link' href='#'>클릭 시 조리 완료</a>"
-	            str += "				<div class='big text-white'>"
-	            str += "					<i class='fas fa-angle-right'></i>"
-	            str += "				</div>"
-	            str += "			</div>"
-	            str += "		</div>"
-	            str += "	</div>"
-	            str += "</div>"
-	
-	            newOrder.innerHTML += str;
-	
-	        }//endif
-	    })//end for
-	})
-	/*--------------------------------조리완료---------------------------------*/
-    function clickTest(){
-        console.log("aaa");
+                //newOrder.innerHTML += jsonData.store;
+                let str = "";
+
+                str += "<div class='col-xl-3 col-md-6 "+docId+"'>"
+                str += "	<div class='card card-hover' onclick=clickTest(\'"+docId+"\')>"
+                str += "		<div class='card bg-success text-white mb-4'>"
+                str += "			<div class='card-order font-big'>"
+                for (let i = 0, len = jsonData.order.length || 0; i < len; i++) {
+                    console.log(jsonData.order[i])
+                    str += "			<div>" + jsonData.order[i].menu + " " + jsonData.order[i].quantity + "개</div>"
+                }
+                str += "				<div>주문번호: " + jsonData.orderNum + "</div>"
+                str += "				<div>" + time + "</div>"
+                str += "			</div>"
+                str += "			<div class='card-footer d-flex align-items-center justify-content-between'>"
+                str += "				<a class='big text-white stretched-link' href='#'>클릭 시 조리 완료</a>"
+                str += "				<div class='big text-white'>"
+                str += "					<i class='fas fa-angle-right'></i>"
+                str += "				</div>"
+                str += "			</div>"
+                str += "		</div>"
+                str += "	</div>"
+                str += "</div>"
+
+                newOrder.insertAdjacentHTML('afterbegin',str);
+
+            }//endif
+        })//end for
+    })
+
+    /*--------------------------------조리완료---------------------------------*/
+    function clickTest(id){
+        console.log("aaa"+id);
+        //alert("aa")
+        
+        //주문 완료로 변경
+        db.collection("Tests").doc(id).update({
+            orderState: 'done',
+            time: new Date()
+        })
+            .then(docRef => {
+                console.log("Document written with ID: ", docRef);
+
+            })
+            .catch((error) => {
+                console.error("Error adding document: ", error);
+            });
+        
+ 		dqs('.'+id).remove();
     }
 	
 </script>

@@ -304,7 +304,7 @@
 								class="mdi mdi-chart-bar"></i><span class="hide-menu">통계</span></a></li>
 						<li class="sidebar-item"><a
 							class="sidebar-link waves-effect waves-dark sidebar-link"
-							href="/owner/business/main" aria-expanded="false"><i
+							href="/owner/business/order" aria-expanded="false"><i
 								class="mdi mdi-chart-bubble"></i><span class="hide-menu">장사
 									시작하기</span></a></li>
 						<li class="sidebar-item"><a
@@ -313,7 +313,7 @@
 								class="mdi mdi-border-inside"></i><span class="hide-menu">공지사항</span></a></li>
 						<li class="sidebar-item"><a
 							class="sidebar-link waves-effect waves-dark sidebar-link"
-							href="/owner/myshop/<sec:authentication property="principal" var="pinfo" /><sec:authorize access="isAuthenticated()"><c:if test="${pinfo.username ne null }"><sec:authentication property="principal.username"/></c:if></sec:authorize>/intro" aria-expanded="false"><i
+							href="/owner/myshop/<sec:authentication property="principal" var="pinfo" /><sec:authorize access="isAuthenticated()"><c:if test="${pinfo.username ne null }"><sec:authentication property="principal.username"/>/intro</c:if></sec:authorize>" aria-expanded="false"><i
 								class="mdi mdi-blur-linear"></i><span class="hide-menu">내
 									가게</span></a></li>
 						<li class="sidebar-item"><a

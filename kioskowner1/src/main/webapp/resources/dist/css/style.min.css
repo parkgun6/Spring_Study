@@ -2986,6 +2986,15 @@ textarea.form-control-lg {
     border-color: #343a40
 }
 
+.card-order {
+    height: 250px;
+    padding: 2rem;
+}
+
+.font-big {
+    font-size: 20px;
+}
+
 .btn-cyan {
     color: #000;
     background-color: #27a9e3;
@@ -4257,14 +4266,13 @@ textarea.form-control-lg {
 
 .card {
     position: relative;
-    display: flex;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
     background-color: #fff;
     background-clip: border-box;
     border: 0px solid transparent;
-    border-radius: 0px
+    border-radius: 3px
 }
 
 .card > hr {
