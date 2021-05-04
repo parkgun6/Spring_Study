@@ -121,14 +121,11 @@ function preview(){
 	const formData = new FormData();
 	const input = dqs("input[name=uploadFile]");
 
-	//jquery라면 input[0].files; 가 된다.
 	const files = input.files;
 	
-	//log를찍으면 element만 나오고 안에 올라간파일을 알 수 없다.
 	console.dir(input);
 	
 	for (var i = 0; i < files.length; i++) {
-		//controller에 있는 파라미터명과 맞춰주어야한다.
 		formData.append("files",files[i]);
 	}
 	
