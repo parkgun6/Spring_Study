@@ -110,4 +110,6 @@ public class MenuMapperTests {
 	public void testDeleteMenu() {
 		mapper.deleteMenu(11L);
 	}
+	
+
 }

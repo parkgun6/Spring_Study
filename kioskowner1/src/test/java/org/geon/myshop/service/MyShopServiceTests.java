@@ -1,10 +1,7 @@
 package org.geon.myshop.service;
 
 
-import java.util.List;
 
-import org.geon.common.dto.PageDTO;
-import org.geon.myshop.domain.MyShopVO;
 import org.geon.myshop.dto.MenuDTO;
 import org.geon.myshop.dto.MyShopDTO;
 import org.junit.Test;
