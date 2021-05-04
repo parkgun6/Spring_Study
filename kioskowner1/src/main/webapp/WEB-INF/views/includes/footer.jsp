@@ -64,6 +64,8 @@
 
 
 <script>
+
+/* -----------------------------------에디터 툴바 옵션------------------------------------- */
 	var toolbarOptions = [ [ {
 		'size' : [ 'small', false, 'large', 'huge' ]
 	} ], // custom dropdown
