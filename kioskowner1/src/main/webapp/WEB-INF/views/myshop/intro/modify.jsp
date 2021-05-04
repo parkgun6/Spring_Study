@@ -106,14 +106,6 @@ document.querySelector(".modBtn").addEventListener("click", function(e){
 	
 	//sendAjax(data);
 
-/* 	return fetch("/owner/news/modify",
-			{method:"post",
-			headers:{'Content-Type' : 'application/json'},
-			body:JSON.stringify(data)}).then(res => {return res.text()})
-			.then(result => {console.log("Result:"+result)
-				$("#modModal").modal("show")	
-				});
- */
 }, false); 
 
 const uploadUL = dqs(".uploadResult");
