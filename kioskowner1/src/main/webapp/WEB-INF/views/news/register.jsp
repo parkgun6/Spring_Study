@@ -101,18 +101,6 @@ function movePage(){
 
 
 
-
-/* fnResult는 Promise상태 */
-//const fnResult = sendAjax(data);
-
-//console.log("1111"+fnResult);
-
-/* Promise안에 있는 값을 반환 */
-//fnResult.then(result => {
-//	console.log("RESULT : "+ result);
-//	$("#registerModal").modal('hide')
-//})
-
 /* ---------------------------------------------------------------------------------- */
 /* --------------------------------------파일 업로드------------------------------------ */
 /* ---------------------------------------------------------------------------------- */
@@ -209,13 +197,7 @@ function preview(){
 		
 		document.querySelector(".custom-file").insertAdjacentHTML('afterbegin',outerHTML);
 		console.dir(document.querySelector("input[name=uploadFile]"));
-		//input = cloneUploadFile;
-		//console.log(input.value);
 		
-		//readonly이기 때문에 value=""는 하지않는게 좋다.
-		//input.value="";
-		//console.log(input.value);
-		//console.dir(input.innerHTML );
 	})
 }
 

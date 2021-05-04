@@ -120,10 +120,6 @@ console.log(card)
 //const banoval = table.querySelector("input[name=bano]").value
 //const titleval = table.querySelector("input[name=title]").value
 //const contentval = table.querySelector("input[name=content]").value
-//	const writerval = table.querySelector("input[name=writer]").value
-//console.log(table.querySelector("input[name=bano]").value)
-//console.log(table.querySelector("input[name=title]").value)
-//console.log(table.querySelector("input[name=content]").value)
 
 /* ------------------------------게시글로이동------------------------------ */
 function movePage(){
@@ -178,12 +174,6 @@ dqs(".listBtn").addEventListener("click",function(){
 	actionForm.submit()
 },false)
 
-//const fnResult = sendAjax(data);
-
-//fnResult.then(result => {console.log("Result:"+result)
-//	$("#modModal").modal("show")	
-//	});
-
 
 /* ------------------------------삭제 Ajax------------------------------ */
 
@@ -230,14 +220,6 @@ document.querySelector(".modBtn").addEventListener("click", function(e){
 	
 	//sendAjax(data);
 
-/* 	return fetch("/owner/news/modify",
-			{method:"post",
-			headers:{'Content-Type' : 'application/json'},
-			body:JSON.stringify(data)}).then(res => {return res.text()})
-			.then(result => {console.log("Result:"+result)
-				$("#modModal").modal("show")	
-				});
- */
 }, false); 
 
 const uploadUL = dqs(".uploadResult");
