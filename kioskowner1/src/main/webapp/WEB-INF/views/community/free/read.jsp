@@ -55,7 +55,7 @@
 		</div>
 		<div class="panel-body">
 			<ul class="chat">
-				
+
 			</ul>
 		</div>
 	</div>
@@ -156,8 +156,8 @@
 				<p>삭제완료</p>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" onclick="reloadPage()"
-					data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-secondary"
+					onclick="reloadPage()" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
@@ -347,7 +347,12 @@
             	str += "				<img src='/owner/resources/assets/images/users/1.jpg' alt='user' width='50' class='rounded-circle'>"
             	str += "			</div>"
             	str += "			<div class='comment-text w-100'>"
-                str += "					<button class='replyFixBtn btn btn-cyan btn-sm text-white' onclick='deleteReply("+list[i].rno+")' type='button'>Del</button>"
+            	str += "					<sec:authentication property='principal' var='pinfo' />"
+            	str += "					<sec:authorize access='isAuthenticated()'>"
+            	str += "						<c:if test='${pinfo.username eq "+list[i].writer+"}'>"
+                str += "							<button class='replyFixBtn btn btn-cyan btn-sm text-white' onclick='deleteReply("+list[i].rno+")' type='button'>Del</button>"
+                str += "						</c:if>"
+                str += "					</sec:authorize>"
             	str += "				<h5 class='font-large'>"+list[i].writer+"</h5>"
             	str += "				<div class='comment-footer'>"
             	str += "					<span class='text-muted'>"+today()+"" 

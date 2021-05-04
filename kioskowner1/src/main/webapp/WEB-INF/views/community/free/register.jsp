@@ -99,35 +99,16 @@ function movePage(){
 	self.location="/owner/community/free"
 }
 
-
-
-
-/* fnResult는 Promise상태 */
-//const fnResult = sendAjax(data);
-
-//console.log("1111"+fnResult);
-
-/* Promise안에 있는 값을 반환 */
-//fnResult.then(result => {
-//	console.log("RESULT : "+ result);
-//	$("#registerModal").modal('hide')
-//})
-
 /* ---------------------------------------------------------------------------------- */
 /* --------------------------------------파일 업로드------------------------------------ */
 /* ---------------------------------------------------------------------------------- */
 document.querySelector(".registerBtn").addEventListener("click", function(e){
-	//console.log("aaa")
-	//console.log( card.querySelector("textarea[name=content]").innerText)
 	const titleval = card.querySelector("input[name=title]").value
-	//console.log(titleval)
 	const writerval = card.querySelector("input[name=writer]").value
 	const categoryval = card.querySelector("input[name=category]").value
 	const text = quill.root.innerHTML;
 	
 	console.log("-------------------------")
-	
-	//console.log(contentval);
 
 	const data = {title:titleval,content:text,writer:writerval,category:categoryval,fileList: arr};
 	
@@ -135,8 +116,6 @@ document.querySelector(".registerBtn").addEventListener("click", function(e){
 
 	console.log(text);
 	
-	//sendAjax(data);
-
   fetch("/owner/community/free/register",
 		  {
 	  		method: 'post',
@@ -184,11 +163,8 @@ function preview(){
 		let htmlCode = "";
 		for (let i = 0; i < jsonObj.length; i++) {
 			
-			//변수를 선언해주는것이 좋다.
 			let fileObj = jsonObj[i];
 			arr.push(fileObj)
-			//돔은 한번만 만들어서 한번에 append해주는게 성능상 좋다.
-			//remove(remove(JSON.stringify))를 해줘야지만 동작한다.
 			htmlCode +="<li id='li_"+fileObj.uuid+"'><span class='li-attach'>"+fileObj.fileName+"</span><button class='btn btn-outline-danger' onclick='removeFile("+JSON.stringify(fileObj)+")'>X</button></li>";
 			quill.root.innerHTML += "<img src='/owner/view?file="+fileObj.link+"'>";
 			
@@ -212,7 +188,6 @@ function preview(){
 		//input = cloneUploadFile;
 		//console.log(input.value);
 		
-		//readonly이기 때문에 value=""는 하지않는게 좋다.
 		//input.value="";
 		//console.log(input.value);
 		//console.dir(input.innerHTML );
@@ -226,7 +201,6 @@ function preview(){
 
 function removeFile(param){
 	console.log(param);
-	//alert("remove file");
 	
 	fetch("/owner/removeFile",
 			{

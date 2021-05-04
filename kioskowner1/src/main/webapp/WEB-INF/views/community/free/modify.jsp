@@ -178,13 +178,6 @@ dqs(".listBtn").addEventListener("click",function(){
 	actionForm.submit()
 },false)
 
-//const fnResult = sendAjax(data);
-
-//fnResult.then(result => {console.log("Result:"+result)
-//	$("#modModal").modal("show")	
-//	});
-
-
 /* ------------------------------삭제 Ajax------------------------------ */
 
 	function sendRemoveAjax(){
