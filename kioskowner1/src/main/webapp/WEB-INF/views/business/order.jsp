@@ -84,9 +84,9 @@
 	        //console.log(change.type);
 	        if (change.type === 'added') {
 	            //주문데이터
-	            console.log(change.doc.data());
+	            //console.log(change.doc.data());
 	            //주문아이디
-	            console.log(change.doc.id)
+	            //console.log(change.doc.id)
 				const docId = change.doc.id;
 	            const jsonData = change.doc.data();
 	            
@@ -97,7 +97,7 @@
 	            const time = hour + "시 " + min + "분 " + second + "초";
 	            
 	            for (let i = 0, len = jsonData.order.length || 0; i < len; i++) {
-	                console.log(jsonData.order[i])
+	                //console.log(jsonData.order[i])
 	            }
 	
                 //newOrder.innerHTML += jsonData.store;
@@ -108,7 +108,7 @@
                 str += "		<div class='card bg-success text-white mb-4'>"
                 str += "			<div class='card-order font-big'>"
                 for (let i = 0, len = jsonData.order.length || 0; i < len; i++) {
-                    console.log(jsonData.order[i])
+                    //console.log(jsonData.order[i])
                     str += "			<div>" + jsonData.order[i].menu + " " + jsonData.order[i].quantity + "개</div>"
                 }
                 str += "				<div>주문번호: " + jsonData.orderNum + "</div>"
@@ -137,8 +137,7 @@
         
         //주문 완료로 변경
         db.collection("Tests").doc(id).update({
-            orderState: 'done',
-            time: new Date()
+            orderState: 'done'
         })
             .then(docRef => {
                 console.log("Document written with ID: ", docRef);
